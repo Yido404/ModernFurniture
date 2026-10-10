@@ -1,0 +1,1 @@
+{"variants":{"facing=north":{"model":"modernfurniture:block/desk_orange"},"facing=east":{"model":"modernfurniture:block/desk_orange","y":90},"facing=south":{"model":"modernfurniture:block/desk_orange","y":180},"facing=west":{"model":"modernfurniture:block/desk_orange","y":270}}}

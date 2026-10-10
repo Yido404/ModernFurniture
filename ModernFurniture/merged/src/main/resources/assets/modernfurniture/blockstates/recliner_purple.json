@@ -1,0 +1,1 @@
+{"variants":{"facing=north":{"model":"modernfurniture:block/recliner_purple"},"facing=east":{"model":"modernfurniture:block/recliner_purple","y":90},"facing=south":{"model":"modernfurniture:block/recliner_purple","y":180},"facing=west":{"model":"modernfurniture:block/recliner_purple","y":270}}}

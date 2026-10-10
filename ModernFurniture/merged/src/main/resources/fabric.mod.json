@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "modernfurniture",
+  "version": "${version}",
+  "name": "Modern Furniture",
+  "description": "Sofas, recliners, beds, lamps and kitchen appliances - every piece can be dyed in the crafting table.",
+  "authors": [
+    "you"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/modernfurniture/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.example.furniture.FurnitureMod"
+    ],
+    "client": [
+      "com.example.furniture.client.FurnitureClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

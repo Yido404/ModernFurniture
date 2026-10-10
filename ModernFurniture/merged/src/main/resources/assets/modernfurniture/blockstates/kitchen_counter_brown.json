@@ -1,0 +1,1 @@
+{"variants":{"facing=north":{"model":"modernfurniture:block/kitchen_counter_brown"},"facing=east":{"model":"modernfurniture:block/kitchen_counter_brown","y":90},"facing=south":{"model":"modernfurniture:block/kitchen_counter_brown","y":180},"facing=west":{"model":"modernfurniture:block/kitchen_counter_brown","y":270}}}

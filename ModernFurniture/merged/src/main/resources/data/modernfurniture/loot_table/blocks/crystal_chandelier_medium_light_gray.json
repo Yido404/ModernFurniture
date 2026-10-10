@@ -1,0 +1,1 @@
+{"type":"minecraft:block","pools":[{"rolls":1,"bonus_rolls":0,"entries":[{"type":"minecraft:item","name":"modernfurniture:crystal_chandelier_medium_light_gray"}],"conditions":[{"condition":"minecraft:block_state_property","block":"modernfurniture:crystal_chandelier_medium_light_gray","properties":{"px":"0","py":"1","pz":"0"}},{"condition":"minecraft:survives_explosion"}]}]}

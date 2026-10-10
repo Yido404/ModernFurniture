@@ -1,0 +1,1 @@
+{"variants":{"facing=north":{"model":"modernfurniture:block/armchair_gray"},"facing=east":{"model":"modernfurniture:block/armchair_gray","y":90},"facing=south":{"model":"modernfurniture:block/armchair_gray","y":180},"facing=west":{"model":"modernfurniture:block/armchair_gray","y":270}}}

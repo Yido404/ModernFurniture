@@ -1,0 +1,1 @@
+{"variants":{"facing=north":{"model":"modernfurniture:block/dining_chair_purple"},"facing=east":{"model":"modernfurniture:block/dining_chair_purple","y":90},"facing=south":{"model":"modernfurniture:block/dining_chair_purple","y":180},"facing=west":{"model":"modernfurniture:block/dining_chair_purple","y":270}}}

@@ -1,0 +1,1 @@
+{"type":"minecraft:block","pools":[{"rolls":1,"bonus_rolls":0,"entries":[{"type":"minecraft:item","name":"modernfurniture:crystal_chandelier_large_pink"}],"conditions":[{"condition":"minecraft:block_state_property","block":"modernfurniture:crystal_chandelier_large_pink","properties":{"px":"1","py":"1","pz":"1"}},{"condition":"minecraft:survives_explosion"}]}]}

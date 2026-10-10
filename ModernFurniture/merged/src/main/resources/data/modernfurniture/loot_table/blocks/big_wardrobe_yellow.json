@@ -1,0 +1,1 @@
+{"type":"minecraft:block","pools":[{"rolls":1,"bonus_rolls":0,"entries":[{"type":"minecraft:item","name":"modernfurniture:big_wardrobe_yellow"}],"conditions":[{"condition":"minecraft:block_state_property","block":"modernfurniture:big_wardrobe_yellow","properties":{"px":"0","py":"0","pz":"0"}},{"condition":"minecraft:survives_explosion"}]}]}

@@ -1,0 +1,1 @@
+{"type":"minecraft:block","pools":[{"rolls":1,"bonus_rolls":0,"entries":[{"type":"minecraft:item","name":"modernfurniture:simple_bed_orange"}],"conditions":[{"condition":"minecraft:block_state_property","block":"modernfurniture:simple_bed_orange","properties":{"part":"head"}},{"condition":"minecraft:survives_explosion"}]}]}

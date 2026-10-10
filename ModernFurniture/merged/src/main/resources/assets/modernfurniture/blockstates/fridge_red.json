@@ -1,0 +1,1 @@
+{"variants":{"facing=north":{"model":"modernfurniture:block/fridge_red"},"facing=east":{"model":"modernfurniture:block/fridge_red","y":90},"facing=south":{"model":"modernfurniture:block/fridge_red","y":180},"facing=west":{"model":"modernfurniture:block/fridge_red","y":270}}}

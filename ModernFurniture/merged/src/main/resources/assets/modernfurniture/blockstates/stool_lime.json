@@ -1,0 +1,1 @@
+{"variants":{"facing=north":{"model":"modernfurniture:block/stool_lime"},"facing=east":{"model":"modernfurniture:block/stool_lime","y":90},"facing=south":{"model":"modernfurniture:block/stool_lime","y":180},"facing=west":{"model":"modernfurniture:block/stool_lime","y":270}}}
