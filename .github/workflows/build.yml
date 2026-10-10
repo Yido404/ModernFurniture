@@ -1,0 +1,27 @@
+name: Modern Furniture build
+on: [pull_request, push]
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Validate Gradle wrapper
+        uses: gradle/actions/wrapper-validation@v6
+      - name: Set up JDK
+        uses: actions/setup-java@v5
+        with:
+          java-version: '25'
+          distribution: microsoft
+      - name: Make Gradle wrapper executable
+        working-directory: ModernFurniture/merged
+        run: chmod +x ./gradlew
+      - name: Build mod
+        working-directory: ModernFurniture/merged
+        run: ./gradlew build
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: modernfurniture
+          path: ModernFurniture/merged/build/libs/
