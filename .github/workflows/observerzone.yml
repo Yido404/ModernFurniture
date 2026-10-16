@@ -1,0 +1,41 @@
+name: Observerzone build
+
+on:
+  push:
+    paths:
+      - 'Observerzone/**'
+      - '.github/workflows/observerzone.yml'
+  pull_request:
+    paths:
+      - 'Observerzone/**'
+      - '.github/workflows/observerzone.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: Observerzone
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Validate Gradle wrapper
+        uses: gradle/actions/wrapper-validation@v6
+      - name: Set up JDK
+        uses: actions/setup-java@v5
+        with:
+          java-version: '25'
+          distribution: microsoft
+      - name: Make Gradle wrapper executable
+        run: chmod +x gradlew
+      - name: Build mod
+        run: ./gradlew build
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: observerzone
+          path: Observerzone/build/libs/
