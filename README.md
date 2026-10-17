@@ -1,9 +1,53 @@
-# MC_mod
+# Modern Furniture / 现代家具 (Fabric 1.21.11)
 
-[ModernFurniture](ModernFurniture/merged/README_FURNITURE.md) — Fabric 1.21.11 家具 Mod。
+30 类家具 × 16 种染料色 = 480 个方块。改了家具/配方后运行 `python3 tools/generate.py` 重新生成资源。
 
-构建：进入 `ModernFurniture/merged` 后运行 `./gradlew build`（Windows 使用 `gradlew.bat build`）。
+## 座椅(右键即可坐下,潜行起身)
+沙发、转角沙发、扶手椅、躺椅(坐着每 5 秒回 1 点血)、餐椅、圆凳。
+* 沙发并排会自动拼接;沙发与转角沙发相连时,接触一侧的扶手自动消失。
+* 转角沙发:普通放置 = 靠背在左侧;**潜行放置 = 镜像(靠背在右侧)**。
+  L 形摆法:转角沙发朝北 → 它右边放一张朝北的沙发,它前方放一张朝东的沙发(镜像则相反)。
 
-[Observerzone](Observerzone/README.md) — Fabric 1.21.11 侦测器区域管理 Mod，通过命令划定禁用侦测器脉冲的区域，支持按维度管理和存档持久化。
+## 床(都是原版床逻辑:睡觉跳夜、设重生点)
+* 单人床、天蓬床
+* 双人床:并排放两张(或更多)自动合并成大床,每一格都能睡
+* 上下铺:放一次自动生成上下两层(共 4 格),**上铺下铺都能睡**;拆下铺会连带拆上铺(上铺空间不足时放不下)
 
-下载：[Observerzone 1.0.0](Observerzone/releases/observerzone-1.0.0.jar)。源码及构建说明见 `Observerzone/`。
+## 桌子
+* 餐桌:与相邻餐桌自动拼接成长桌/大桌,只在外侧四角保留桌腿
+* 茶几、边桌、吧台桌:装饰
+* 书桌:27 格储物
+
+## 大型多格家具
+* 双开门大冰箱 2×2、双开门大衣柜 2×2:54 格储物,点任意一格都能打开
+* 水晶灯:小(1 格)/ 中(1×2)/ 大(3×3×2,共 18 格);点击你放置的那一格(顶部中心)悬挂,右键开关,亮时发 15 级光
+
+## 烹饪与厨房
+燃气灶(熔炉)、烤箱(烟熏炉)、水槽(空桶→水桶、玻璃瓶→水瓶)、厨房操作台(工作台)、冰箱/储物柜/衣柜(27 格)。
+
+## 染色
+任意颜色的同类家具 + 任意染料,在工作台无序合成 → 对应颜色。
+
+## 安装与构建
+
+需要 Minecraft **1.21.11**、Fabric Loader **0.19.5 或以上**、Java **21 或以上**，以及对应版本的 Fabric API。
+
+在本仓库根目录构建；当前自动构建使用 JDK 25，输出 Java 21 字节码。
+
+```powershell
+# Windows
+.\gradlew.bat build
+```
+
+```sh
+# Linux / macOS
+./gradlew build
+```
+
+将 `build/libs/` 中不带 `-sources` 的 Mod JAR 与 Fabric API 放入游戏或服务器的 `mods/` 文件夹。也可以在本仓库 Actions 页面下载成功构建的 `modernfurniture` 产物。
+
+源码、资源、Gradle Wrapper 和 `tools/generate.py` 均位于本仓库根目录下；完整家具说明仍保留在 [README_FURNITURE.md](README_FURNITURE.md)。原有许可证见 [LICENSE](LICENSE)。
+
+## 仓库迁移
+
+本项目于 2026-10-17 从 [Yido404/MC_mod 的 ModernFurniture/merged](https://github.com/Yido404/MC_mod/tree/main/ModernFurniture/merged) 拆为独立仓库。原有 MC_mod 提交历史随迁移保留在本仓库和原仓库中，后续开发使用本仓库。

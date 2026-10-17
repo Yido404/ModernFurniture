@@ -1,5 +1,12 @@
-name: Modern Furniture build
-on: [pull_request, push]
+name: ModernFurniture build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   build:
@@ -14,14 +21,10 @@ jobs:
         with:
           java-version: '25'
           distribution: microsoft
-      - name: Make Gradle wrapper executable
-        working-directory: ModernFurniture/merged
-        run: chmod +x ./gradlew
       - name: Build mod
-        working-directory: ModernFurniture/merged
         run: ./gradlew build
       - name: Upload build artifacts
         uses: actions/upload-artifact@v7
         with:
           name: modernfurniture
-          path: ModernFurniture/merged/build/libs/
+          path: build/libs/
